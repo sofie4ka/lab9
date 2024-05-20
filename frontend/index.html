@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Click Recorder</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+<main id="main-holder">
+    <h1>Button Click Recorder</h1>
+
+    <button id="info-btn" class="action-btn">Record Info Click</button>
+    <button id="error-btn" class="action-btn">Record Error Click</button>
+
+    <div id="status-msg-holder">
+        <p id="status-msg"></p>
+    </div>
+</main>
+</body>
+
+<style>
+    body {
+        height: 100%;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        background-color: #3a3a3a;
+    }
+
+    #main-holder {
+        width: 50%;
+        height: 70%;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        background-color: white;
+        border-radius: 7px;
+        box-shadow: 0px 0px 5px 2px black;
+    }
+
+    .action-btn {
+        width: 150px;
+        padding: 10px;
+        margin: 10px;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        font-weight: bold;
+        background-color: #3a3a3a;
+        cursor: pointer;
+        outline: none;
+    }
+
+    #status-msg-holder {
+        margin-top: 20px;
+    }
+
+    #status-msg {
+        font-size: 14px;
+        font-weight: bold;
+        color: green;
+        opacity: 0;
+    }
+</style>
+
+<script>
+    const infoBtn = document.getElementById("info-btn");
+    const errorBtn = document.getElementById("error-btn");
+    const statusMsg = document.getElementById("status-msg");
+
+    infoBtn.addEventListener("click", () => {
+        recordClick('info', 'Info button clicked');
+    });
+
+    errorBtn.addEventListener("click", () => {
+        recordClick('error', 'Error button clicked');
+    });
+
+    function recordClick(type, message) {
+        axios.post('/api/record-click', {
+            type: type,
+            message: message,
+            timestamp: new Date().toISOString()
+        }).then((response) => {
+            showStatusMsg(`Recorded: ${message}`);
+        }).catch((error) => {
+            console.error(error);
+            showStatusMsg('Failed to record click', true);
+        });
+    }
+
+    function showStatusMsg(msg, isError = false) {
+        statusMsg.style.color = isError ? 'red' : 'green';
+        statusMsg.textContent = msg;
+        statusMsg.style.opacity = 1;
+        setTimeout(() => {
+            statusMsg.style.opacity = 0;
+        }, 3000);
+    }
+</script>
+</html>

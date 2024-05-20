@@ -1,0 +1,49 @@
+version: '3'
+services:
+  fluentd:
+    build: ./fluentd
+    container_name: fluentd
+    volumes:
+      - ./fluentd/conf:/fluentd/etc
+      - ./logs/myapp:/logs
+    ports:
+      - "24224:24224"
+
+
+  elasticsearch:
+    image:  docker.elastic.co/elasticsearch/elasticsearch:8.13.3
+    container_name: elasticsearch
+    environment:
+      discovery.type: single-node
+      ES_JAVA_OPTS: "-Xms1g -Xmx1g"
+      xpack.security.enabled: false
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+
+
+  kibana:
+    image:  docker.elastic.co/kibana/kibana:8.13.3
+    container_name: kibana
+    environment:
+      discovery.type: "single-node"
+    ports:
+      - "5601:5601"
+
+  app:
+    build: .
+    ports:
+      - '3000:3000'
+    environment:
+      - PORT=3000
+    depends_on:
+      - fluentd
+      - elasticsearch
+      - kibana
+
+  frontend:
+    image: nginx:latest
+    volumes:
+      - ./frontend:/usr/share/nginx/html
+    ports:
+      - '3001:3000'

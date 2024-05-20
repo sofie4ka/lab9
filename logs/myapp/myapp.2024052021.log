@@ -1,0 +1,31 @@
+2024-05-20T21:28:25+00:00	fluent.info	{"pid":31,"ppid":8,"worker":0,"message":"starting fluentd worker pid=31 ppid=8 worker=0"}
+2024-05-20T21:28:25+00:00	fluent.info	{"port":24224,"bind":"0.0.0.0","message":"listening port port=24224 bind=\"0.0.0.0\""}
+2024-05-20T21:28:25+00:00	fluent.info	{"worker":0,"message":"fluentd worker is now running worker=0"}
+2024-05-20T21:28:03+00:00	app.click	{"message":"Info button clicked","type":"info","timestamp":"2024-05-20T21:28:03.593Z","session":{}}
+2024-05-20T21:28:04+00:00	app.click	{"message":"Error button clicked","type":"error","timestamp":"2024-05-20T21:28:04.804Z","session":{}}
+2024-05-20T21:28:05+00:00	app.click	{"message":"Info button clicked","type":"info","timestamp":"2024-05-20T21:28:05.955Z","session":{}}
+2024-05-20T21:28:07+00:00	app.click	{"message":"Error button clicked","type":"error","timestamp":"2024-05-20T21:28:07.438Z","session":{}}
+2024-05-20T21:28:08+00:00	app.click	{"message":"Info button clicked","type":"info","timestamp":"2024-05-20T21:28:08.886Z","session":{}}
+2024-05-20T21:28:09+00:00	app.click	{"message":"Error button clicked","type":"error","timestamp":"2024-05-20T21:28:09.987Z","session":{}}
+2024-05-20T21:28:11+00:00	app.click	{"message":"Info button clicked","type":"info","timestamp":"2024-05-20T21:28:11.278Z","session":{}}
+2024-05-20T21:28:12+00:00	app.click	{"message":"Info button clicked","type":"info","timestamp":"2024-05-20T21:28:12.886Z","session":{}}
+2024-05-20T21:28:13+00:00	app.click	{"message":"Info button clicked","type":"info","timestamp":"2024-05-20T21:28:13.072Z","session":{}}
+2024-05-20T21:29:10+00:00	app.click	{"message":"Info button clicked","type":"info","timestamp":"2024-05-20T21:29:10.804Z","session":{}}
+2024-05-20T21:29:11+00:00	app.click	{"message":"Error button clicked","type":"error","timestamp":"2024-05-20T21:29:11.467Z","session":{}}
+2024-05-20T21:29:35+00:00	app.click	{"message":"Info button clicked","type":"info","timestamp":"2024-05-20T21:29:35.433Z","session":{}}
+2024-05-20T21:29:36+00:00	app.click	{"message":"Error button clicked","type":"error","timestamp":"2024-05-20T21:29:36.417Z","session":{}}
+2024-05-20T21:43:43+00:00	app.click	{"message":"Info button clicked","type":"info","timestamp":"2024-05-20T21:43:43.333Z","session":{}}
+2024-05-20T21:43:44+00:00	app.click	{"message":"Info button clicked","type":"info","timestamp":"2024-05-20T21:43:44.908Z","session":{}}
+2024-05-20T21:43:45+00:00	app.click	{"message":"Info button clicked","type":"info","timestamp":"2024-05-20T21:43:45.424Z","session":{}}
+2024-05-20T21:43:45+00:00	app.click	{"message":"Info button clicked","type":"info","timestamp":"2024-05-20T21:43:45.659Z","session":{}}
+2024-05-20T21:43:45+00:00	app.click	{"message":"Info button clicked","type":"info","timestamp":"2024-05-20T21:43:45.777Z","session":{}}
+2024-05-20T21:43:45+00:00	app.click	{"message":"Info button clicked","type":"info","timestamp":"2024-05-20T21:43:45.958Z","session":{}}
+2024-05-20T21:43:46+00:00	app.click	{"message":"Info button clicked","type":"info","timestamp":"2024-05-20T21:43:46.157Z","session":{}}
+2024-05-20T21:43:46+00:00	app.click	{"message":"Info button clicked","type":"info","timestamp":"2024-05-20T21:43:46.357Z","session":{}}
+2024-05-20T21:43:47+00:00	app.click	{"message":"Info button clicked","type":"info","timestamp":"2024-05-20T21:43:47.041Z","session":{}}
+2024-05-20T21:43:49+00:00	app.click	{"message":"Info button clicked","type":"info","timestamp":"2024-05-20T21:43:49.725Z","session":{}}
+2024-05-20T21:44:03+00:00	app.click	{"message":"Info button clicked","type":"info","timestamp":"2024-05-20T21:44:03.792Z","session":{}}
+2024-05-20T21:44:08+00:00	app.click	{"message":"Info button clicked","type":"info","timestamp":"2024-05-20T21:44:08.508Z","session":{}}
+2024-05-20T21:44:14+00:00	app.click	{"message":"Info button clicked","type":"info","timestamp":"2024-05-20T21:44:14.475Z","session":{}}
+2024-05-20T21:45:05+00:00	app.click	{"message":"Info button clicked","type":"info","timestamp":"2024-05-20T21:45:05.593Z","session":{}}
+2024-05-20T21:45:14+00:00	app.click	{"message":"Info button clicked","type":"info","timestamp":"2024-05-20T21:45:14.042Z","session":{}}
